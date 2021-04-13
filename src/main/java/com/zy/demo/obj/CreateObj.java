@@ -46,6 +46,12 @@ public class CreateObj {
                     obj = ois.readObject();
                     ois.close();
                     break;
+                //5、通过clone()方法创建对象
+                case 5:
+                    if(obj instanceof Entity){
+                        obj = ((Entity)obj).clone();
+                    }
+                    break;
                 default:
                     System.out.println("no method!");
             }

@@ -6,7 +6,7 @@ import java.io.Serializable;
  * 实体类
  * @author zy
  */
-public class Entity implements Serializable {
+public class Entity implements Serializable,Cloneable {
 
     private int id;
 
@@ -35,5 +35,10 @@ public class Entity implements Serializable {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return super.clone();
     }
 }
